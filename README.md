@@ -23,17 +23,17 @@ Dự án này sử dụng kết hợp **SQL Server (T-SQL)** để làm sạch, 
 * **Data Plan Usage:** Khách hàng không đăng ký Data Plan có tỷ lệ Churn cao gấp 2 lần nhóm sử dụng Data Plan.
 
 ### 2. Customer Risk Profile (Phân nhóm Rủi ro)
-* 🔴 **High Risk Profile:** Khách hàng gọi CSKH $\ge 4$ lần **HOẶC** không gia hạn hợp đồng (ContractRenewal = 0).
-* 🟡 **Medium Risk Profile:** Khách hàng gọi CSKH $2 - 3$ lần và chưa đăng ký Data Plan.
-* 🟢 **Low Risk Profile:** Khách hàng gia hạn hợp đồng, gọi CSKH $\le 1$ lần và có Data Plan.
+* **High Risk Profile:** Khách hàng gọi CSKH $\ge 4$ lần **HOẶC** không gia hạn hợp đồng (ContractRenewal = 0).
+* **Medium Risk Profile:** Khách hàng gọi CSKH $2 - 3$ lần và chưa đăng ký Data Plan.
+* **Low Risk Profile:** Khách hàng gia hạn hợp đồng, gọi CSKH $\le 1$ lần và có Data Plan.
 
 ---
 
-## 💡 Business Recommendations (Đề xuất Chiến lược)
+##  Business Recommendations (Đề xuất Chiến lược)
 
-1. 🚨 **Hệ thống Cảnh báo Sớm (CSKH Alert System):** 
+1. **Hệ thống Cảnh báo Sớm (CSKH Alert System):** 
    * Cài đặt Trigger trên CRM: Khi khách hàng thực hiện **cuộc gọi CSKH thứ 3**, tự động gán cờ ưu đãi/chăm sóc đặc biệt cho Chuyên viên cao cấp xử lý dứt điểm, **tuyệt đối không để phát sinh cuộc gọi thứ 4**.
-2. 🎁 **Chiến dịch Giữ chân Chủ động (Proactive Retention):**
+2. **Chiến dịch Giữ chân Chủ động (Proactive Retention):**
    * Lọc danh sách nhóm High Risk và Not Renewed trực tiếp trên Dashboard để đội Tele-sales liên hệ trước 30 ngày hết hạn hợp đồng kèm chính sách giảm cước $10-15\%$.
-3. 📲 **Gói Cước Tích Hợp (Data Bundling):**
+3. **Gói Cước Tích Hợp (Data Bundling):**
    * Thiết kế gói cước dùng thử Data giá rẻ cho nhóm khách hàng chưa đăng ký Data Plan nhưng có cước phí hàng tháng (MonthlyCharge) cao để gia tăng độ gắn kết (Stickiness).
